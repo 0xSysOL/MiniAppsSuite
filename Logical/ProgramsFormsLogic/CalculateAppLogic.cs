@@ -9,11 +9,11 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
     internal class CalculateAppLogic
     {
 
-      private  enum _enumOperation {Add='+',Sub='-',Mul='*',Div='/'};
-      private  int _Side_1 = 0;
-      private  int _Side_2 = 0;
-      private  char _Operation = ' ';
-        private char _Operations(char Oper) 
+        private enum _enumOperation { Add = '+', Sub = '-', Mul = '*', Div = '/' };
+        private int _Side_1 = 0;
+        private int _Side_2 = 0;
+        private char _Operation = ' ';
+        private char _Operations(char Oper)
         {
 
 
@@ -21,23 +21,23 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
 
         }
 
-        private long _StartProce() 
+        private long _StartProce()
         {
 
-            switch (_Operation) 
+            switch (_Operation)
             {
 
                 case (char)_enumOperation.Add:
                     return _Side_1 + _Side_2;
-              
+
                 case (char)_enumOperation.Sub:
                     return _Side_1 - _Side_2;
 
                 case (char)_enumOperation.Mul:
                     return _Side_1 * _Side_2;
-                
+
                 case (char)_enumOperation.Div:
-                    return (_Side_2 != 0) ? _Side_1 / _Side_2: -1;
+                    return (_Side_2 != 0) ? _Side_1 / _Side_2 : -1;
 
 
 
@@ -48,12 +48,12 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
         }
 
 
-        private bool AddValue(string Text,int LengthSide) 
+        private bool AddValue(string Text, int LengthSide)
         {
 
             if (LengthSide == 0) return false;
 
-            string Side1 = Text.Substring(0,LengthSide);
+            string Side1 = Text.Substring(0, LengthSide);
             string Side2 = Text.Substring(LengthSide + 1);
 
             _Side_1 = Convert.ToInt32(Side1);
@@ -62,55 +62,85 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
 
             return true;
         }
+        private bool IsNegetiveNumber(int Oper,int i, bool []arr,string Text) 
+        {
+
+            
+
+            if (Text[i] == '-' && arr[i - 1] == false)
+                return arr[i] = true;
+            else
+                return arr[i] = false;
+
+
+        }
+
         private void FillArrOperation(bool[] arr, string Text)
         {
-            for (int i = 0; i < Text.Length; i++)  
+
+            int[] getLength = new int[arr.Length];
+            for (int i = 0; i < Text.Length; i++)
             {
 
-                if (_Operations(Text[i]) != '?') 
+                if (_Operations(Text[i]) != '?' && i != 0) 
                 {
                     arr[i] = true;
+                    IsNegetiveNumber(getLength[i],i,arr,Text);
+
                 }
 
             }
+            if (Text[0] == '-')  arr[0] = false;
+
+
+
         }
 
-        private bool Filter(bool[] arr,int Length)  
+        private bool Filter(bool[] arr)
         {
 
             bool Number_OR_Operation = true;
 
+            int Stop = 0;
+
+            if (arr[0] == true || arr[arr.Length-1] == true) return true;
 
 
+            for (int i = 0; i < arr.Length; i++) {
 
-
-
-            return Number_OR_Operation;
-        }
-        private bool FindErrorsInText(bool[]arr,string Text) 
-        {
-
-            bool Number_OR_Operation = false;
-            FillArrOperation(arr, Text);
-
-            for (int i = 0;i < Text.Length;i++) 
-            {
-
-                if (Filter(arr,i)) 
+                if (arr[i] == true)
                 {
+                    Stop++;
+                    Number_OR_Operation = false;
 
-                    Number_OR_Operation = true;
-                    break;
                 }
-                else 
+                else if (arr.Length - 1 == i && arr[i] == false) 
                 {
                     Number_OR_Operation = false;
                 }
+                else 
+                {          
+                    Number_OR_Operation = (Stop != 1) ? true : false;
+
+                }
 
             }
+                
+           
+
+
 
 
             return Number_OR_Operation;
+        } 
+        private bool FindErrorsInText(bool[]arr,string Text) 
+        {
+
+            FillArrOperation(arr, Text);
+
+            return Filter(arr);
+
+
         }
 
         public long StartOperation_Calculator(string Text)
