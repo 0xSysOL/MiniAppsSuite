@@ -64,9 +64,16 @@
     <Compile Include="Forms\ProgramsForms\Form_CalculateApp.Designer.cs">
       <DependentUpon>Form_CalculateApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProgramsForms\Form_UserInputTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProgramsForms\Form_UserInputTable.Designer.cs">
+      <DependentUpon>Form_UserInputTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logical\LogicForm2.cs" />
     <Compile Include="Logical\Logic_LoginF.cs" />
-    <Compile Include="Logical\ProgramsFormsLogic\CalculateAppLogic.cs" />
+    <Compile Include="Logical\ProgramsFormsLogic\Logic_CalculateApp.cs" />
+    <Compile Include="Logical\ProgramsFormsLogic\Logic_UserInputTable.cs" />
     <Compile Include="ProjectFiles\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MainForms\Form_Login.resx">
@@ -77,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProgramsForms\Form_CalculateApp.resx">
       <DependentUpon>Form_CalculateApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProgramsForms\Form_UserInputTable.resx">
+      <DependentUpon>Form_UserInputTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icono Calculadora Blue.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Picturs\table.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

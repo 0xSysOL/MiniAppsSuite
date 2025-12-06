@@ -33,7 +33,7 @@ namespace Project_1_SimpleCalculetor.Forms.ProgramsForms
 
         }
 
-        CalculateAppLogic clsStart = new CalculateAppLogic();
+        Logic_CalculateApp clsStart = new Logic_CalculateApp();
        
         private void Form1_Load(object sender, EventArgs e)
         {

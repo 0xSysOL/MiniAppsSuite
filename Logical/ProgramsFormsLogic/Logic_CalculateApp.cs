@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
 {
-    internal class CalculateAppLogic
+    internal class Logic_CalculateApp
     {
 
         private enum _enumOperation { Add = '+', Sub = '-', Mul = '*', Div = '/' };
@@ -90,6 +90,7 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
                 }
 
             }
+
             if (Text[0] == '-')  arr[0] = false;
 
 

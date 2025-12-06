@@ -69,11 +69,11 @@
             this.ButLogin.Name = "ButLogin";
             this.ButLogin.Size = new System.Drawing.Size(108, 27);
             this.ButLogin.TabIndex = 3;
-            this.ButLogin.Text = "Submet";
+            this.ButLogin.Text = "Submit";
             this.ButLogin.UseVisualStyleBackColor = true;
             this.ButLogin.Click += new System.EventHandler(this.ButLogin_Click);
             // 
-            // Form1
+            // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,7 +83,7 @@
             this.Controls.Add(this.TX_Password);
             this.Controls.Add(this.TX_UserName);
             this.Controls.Add(this.LabelLogin);
-            this.Name = "Form1";
+            this.Name = "Form_Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

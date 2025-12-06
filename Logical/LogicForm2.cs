@@ -34,6 +34,11 @@ namespace Project_1_SimpleCalculetor.Logical
                     break;
 
                 case 1:
+                    Form_UserInputTable ShowUserInputTable = new Form_UserInputTable();
+                    ShowUserInputTable.Show();
+                    _HideForm(HideForm);
+
+
 
                     break;
 

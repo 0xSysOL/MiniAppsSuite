@@ -47,5 +47,7 @@ namespace Project_1_SimpleCalculetor
             radioChange(get, e);
 
         }
+
+        
     }
 }
