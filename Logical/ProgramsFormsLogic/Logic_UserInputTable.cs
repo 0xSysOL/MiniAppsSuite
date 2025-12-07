@@ -28,18 +28,59 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
             
         }
 
-        public void StartProce(ListView  AddToList, string Text_1, string Text_2,Button Type) 
+        public string TypeButton(Button Type) 
         {
 
+            return (Type.Tag.ToString() == "add") ? "add" : (Type.Tag.ToString() == "remove") ? "remove" : "edit";
 
-            ListViewItem NewList = new ListViewItem(RandomID().ToString());
-            NewList.SubItems.Add(Text_1);
-            NewList.SubItems.Add(Text_2);
+        }
+
+       private bool IsUserSelectedOnItem(ListView GetList) 
+        {
+
+            return GetList.SelectedItems.Count > 0;
+        }
+        private bool IsItemEmpty(ListView GetList)
+        {
+
+            return GetList.Items.Count > 0;
+        }
 
 
-
-            AddToList.Items.Add(NewList);
+        public void StartProce(ListView List, string Text_1, string Text_2, Button Type)
+        {
             
+
+            switch (Type.Tag)
+            {
+
+                case "add":
+                    ListViewItem NewList = new ListViewItem(RandomID().ToString());
+                    NewList.SubItems.Add(Text_1);
+                    NewList.SubItems.Add(Text_2);
+                    List.Items.Add(NewList);
+                    
+                    break;
+
+                case "remove":
+
+                    if (IsUserSelectedOnItem(List)&&IsItemEmpty(List))
+                        List.Items.Remove(List.SelectedItems[0]);
+
+
+                    break;
+
+                case "edit":
+
+                    if (IsUserSelectedOnItem(List) && IsItemEmpty(List))
+                    {
+                        List.SelectedItems[0].SubItems[1].Text = Text_1;
+                        List.SelectedItems[0].SubItems[2].Text = Text_2;
+                    }
+                    break;
+            
+
+            }
 
 
 

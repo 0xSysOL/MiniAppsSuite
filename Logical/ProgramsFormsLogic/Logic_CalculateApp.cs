@@ -137,7 +137,16 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
         private bool FindErrorsInText(bool[]arr,string Text) 
         {
 
+            if (
+                (_Operations(Text[0]) != '?' && _Operations(Text[0]) != '-')
+                || 
+                _Operations(Text[Text.Length-1]) != '?') 
+                return true;
+
+                
             FillArrOperation(arr, Text);
+
+            
 
             return Filter(arr);
 
@@ -148,8 +157,7 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
         {
 
 
-            if (Text == "") return 0;
-
+           
             int LengthSides = 0;
             bool[] ArrCountOperation = new bool[Text.Length];
 

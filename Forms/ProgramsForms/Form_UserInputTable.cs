@@ -27,12 +27,18 @@ namespace Project_1_SimpleCalculetor.Forms.ProgramsForms
         private void ButtChecked(object sender, EventArgs e)
         {
 
+
+            
+
             if (!Logic_Proce.IsTextBoxesEmpty(TB_FirstName.Text, TB_LastName.Text))
             {
                 errorProvider.Clear();
-
                 Logic_Proce.StartProce(listView, TB_FirstName.Text, TB_LastName.Text, (Button)sender);
-            
+
+            }else if (Logic_Proce.TypeButton((Button)sender) == "edit"&& listView.Items.Count > 0)
+            {
+                errorProvider.Clear();
+                Logic_Proce.StartProce(listView, TB_FirstName.Text, TB_LastName.Text, (Button)sender);
             }
             else
             {

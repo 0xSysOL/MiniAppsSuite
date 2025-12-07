@@ -55,7 +55,7 @@
             this.listView.Location = new System.Drawing.Point(355, -2);
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(368, 389);
-            this.listView.TabIndex = 0;
+            this.listView.TabIndex = 5;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
             // 
@@ -80,7 +80,7 @@
             this.Butt_.Location = new System.Drawing.Point(32, 277);
             this.Butt_.Name = "Butt_";
             this.Butt_.Size = new System.Drawing.Size(79, 36);
-            this.Butt_.TabIndex = 1;
+            this.Butt_.TabIndex = 2;
             this.Butt_.Tag = "add";
             this.Butt_.Text = "Add";
             this.Butt_.UseVisualStyleBackColor = true;
@@ -91,8 +91,8 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F);
             this.button1.Location = new System.Drawing.Point(113, 277);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 36);
-            this.button1.TabIndex = 2;
+            this.button1.Size = new System.Drawing.Size(97, 36);
+            this.button1.TabIndex = 3;
             this.button1.Tag = "remove";
             this.button1.Text = "Remove";
             this.button1.UseVisualStyleBackColor = true;
@@ -101,10 +101,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F);
-            this.button2.Location = new System.Drawing.Point(194, 277);
+            this.button2.Location = new System.Drawing.Point(216, 277);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 36);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 4;
             this.button2.Tag = "edit";
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@
             this.TB_FirstName.Location = new System.Drawing.Point(145, 150);
             this.TB_FirstName.Name = "TB_FirstName";
             this.TB_FirstName.Size = new System.Drawing.Size(109, 26);
-            this.TB_FirstName.TabIndex = 4;
+            this.TB_FirstName.TabIndex = 0;
             this.TB_FirstName.Validating += new System.ComponentModel.CancelEventHandler(this.Text_FN_LN);
             // 
             // TB_LastName
@@ -126,7 +126,7 @@
             this.TB_LastName.Location = new System.Drawing.Point(145, 182);
             this.TB_LastName.Name = "TB_LastName";
             this.TB_LastName.Size = new System.Drawing.Size(109, 26);
-            this.TB_LastName.TabIndex = 5;
+            this.TB_LastName.TabIndex = 1;
             // 
             // lab_FirstName
             // 

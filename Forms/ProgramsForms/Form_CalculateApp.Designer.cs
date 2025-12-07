@@ -181,7 +181,7 @@
             this.button_Div.Location = new System.Drawing.Point(244, 75);
             this.button_Div.Name = "button_Div";
             this.button_Div.Size = new System.Drawing.Size(71, 66);
-            this.button_Div.TabIndex = 10;
+            this.button_Div.TabIndex = 11;
             this.button_Div.Tag = "";
             this.button_Div.Text = "/";
             this.button_Div.UseVisualStyleBackColor = false;
@@ -195,7 +195,7 @@
             this.button_Mul.Location = new System.Drawing.Point(243, 144);
             this.button_Mul.Name = "button_Mul";
             this.button_Mul.Size = new System.Drawing.Size(71, 66);
-            this.button_Mul.TabIndex = 11;
+            this.button_Mul.TabIndex = 12;
             this.button_Mul.Tag = "";
             this.button_Mul.Text = "*";
             this.button_Mul.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -210,7 +210,7 @@
             this.button_Sub.Location = new System.Drawing.Point(243, 216);
             this.button_Sub.Name = "button_Sub";
             this.button_Sub.Size = new System.Drawing.Size(71, 66);
-            this.button_Sub.TabIndex = 12;
+            this.button_Sub.TabIndex = 13;
             this.button_Sub.Tag = "";
             this.button_Sub.Text = "-";
             this.button_Sub.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -225,7 +225,7 @@
             this.button_Eq.Location = new System.Drawing.Point(243, 360);
             this.button_Eq.Name = "button_Eq";
             this.button_Eq.Size = new System.Drawing.Size(71, 66);
-            this.button_Eq.TabIndex = 13;
+            this.button_Eq.TabIndex = 15;
             this.button_Eq.Text = "=";
             this.button_Eq.UseVisualStyleBackColor = false;
             this.button_Eq.Click += new System.EventHandler(this.button_Eq_Click);
@@ -236,7 +236,7 @@
             this.TB_ShowOperations.Location = new System.Drawing.Point(12, 12);
             this.TB_ShowOperations.Name = "TB_ShowOperations";
             this.TB_ShowOperations.Size = new System.Drawing.Size(302, 54);
-            this.TB_ShowOperations.TabIndex = 14;
+            this.TB_ShowOperations.TabIndex = 16;
             this.TB_ShowOperations.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button0
@@ -247,7 +247,7 @@
             this.button0.Location = new System.Drawing.Point(89, 360);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(71, 66);
-            this.button0.TabIndex = 15;
+            this.button0.TabIndex = 0;
             this.button0.Tag = "";
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = false;
@@ -261,7 +261,7 @@
             this.BTN_Clear.Location = new System.Drawing.Point(12, 83);
             this.BTN_Clear.Name = "BTN_Clear";
             this.BTN_Clear.Size = new System.Drawing.Size(139, 55);
-            this.BTN_Clear.TabIndex = 16;
+            this.BTN_Clear.TabIndex = 10;
             this.BTN_Clear.Tag = "";
             this.BTN_Clear.Text = "Clear";
             this.BTN_Clear.UseVisualStyleBackColor = false;
@@ -275,13 +275,13 @@
             this.button_Add.Location = new System.Drawing.Point(243, 288);
             this.button_Add.Name = "button_Add";
             this.button_Add.Size = new System.Drawing.Size(71, 66);
-            this.button_Add.TabIndex = 17;
+            this.button_Add.TabIndex = 14;
             this.button_Add.Tag = "";
             this.button_Add.Text = "+";
             this.button_Add.UseVisualStyleBackColor = false;
             this.button_Add.Click += new System.EventHandler(this.EnterOperation);
             // 
-            // CalculateForm
+            // Form_CalculateApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -304,7 +304,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "CalculateForm";
+            this.Name = "Form_CalculateApp";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
