@@ -32,7 +32,7 @@ Done
 - Edit Data
 
 ## situation/Status
-the project under development
+~~the project under development~~
 
 
 
