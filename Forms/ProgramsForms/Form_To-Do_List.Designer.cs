@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.Page_AddTasks = new System.Windows.Forms.TabPage();
-            this.LabelPage_1 = new System.Windows.Forms.Label();
-            this.TB_AddedTasks = new System.Windows.Forms.TextBox();
-            this.But_AddTask = new System.Windows.Forms.Button();
-            this.But_Complate = new System.Windows.Forms.Button();
-            this.But_Delete = new System.Windows.Forms.Button();
             this.CLB_AddTasktoList = new System.Windows.Forms.CheckedListBox();
+            this.But_Delete = new System.Windows.Forms.Button();
+            this.But_Complate = new System.Windows.Forms.Button();
+            this.But_AddTask = new System.Windows.Forms.Button();
+            this.TB_AddedTasks = new System.Windows.Forms.TextBox();
+            this.LabelPage_1 = new System.Windows.Forms.Label();
             this.Pages = new System.Windows.Forms.TabControl();
             this.Page_AddTasks.SuspendLayout();
             this.Pages.SuspendLayout();
@@ -58,24 +58,39 @@
             this.Page_AddTasks.Text = "Add Task";
             this.Page_AddTasks.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // LabelPage_1
+            // CLB_AddTasktoList
             // 
-            this.LabelPage_1.AutoSize = true;
-            this.LabelPage_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.LabelPage_1.Location = new System.Drawing.Point(104, 18);
-            this.LabelPage_1.Name = "LabelPage_1";
-            this.LabelPage_1.Size = new System.Drawing.Size(138, 31);
-            this.LabelPage_1.TabIndex = 0;
-            this.LabelPage_1.Text = "To Do List";
+            this.CLB_AddTasktoList.FormattingEnabled = true;
+            this.CLB_AddTasktoList.Items.AddRange(new object[] {
+            "\t"});
+            this.CLB_AddTasktoList.Location = new System.Drawing.Point(82, 150);
+            this.CLB_AddTasktoList.Name = "CLB_AddTasktoList";
+            this.CLB_AddTasktoList.Size = new System.Drawing.Size(174, 157);
+            this.CLB_AddTasktoList.TabIndex = 7;
             // 
-            // TB_AddedTasks
+            // But_Delete
             // 
-            this.TB_AddedTasks.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.TB_AddedTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
-            this.TB_AddedTasks.Location = new System.Drawing.Point(102, 66);
-            this.TB_AddedTasks.Name = "TB_AddedTasks";
-            this.TB_AddedTasks.Size = new System.Drawing.Size(140, 30);
-            this.TB_AddedTasks.TabIndex = 1;
+            this.But_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.But_Delete.Location = new System.Drawing.Point(177, 364);
+            this.But_Delete.Name = "But_Delete";
+            this.But_Delete.Size = new System.Drawing.Size(99, 30);
+            this.But_Delete.TabIndex = 6;
+            this.But_Delete.Tag = "Delete";
+            this.But_Delete.Text = "Delete";
+            this.But_Delete.UseVisualStyleBackColor = true;
+            this.But_Delete.Click += new System.EventHandler(this.Clicked);
+            // 
+            // But_Complate
+            // 
+            this.But_Complate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.But_Complate.Location = new System.Drawing.Point(61, 364);
+            this.But_Complate.Name = "But_Complate";
+            this.But_Complate.Size = new System.Drawing.Size(101, 33);
+            this.But_Complate.TabIndex = 5;
+            this.But_Complate.Tag = "Complated";
+            this.But_Complate.Text = "Complate";
+            this.But_Complate.UseVisualStyleBackColor = true;
+            this.But_Complate.Click += new System.EventHandler(this.Clicked);
             // 
             // But_AddTask
             // 
@@ -90,39 +105,25 @@
             this.But_AddTask.UseVisualStyleBackColor = false;
             this.But_AddTask.Click += new System.EventHandler(this.Clicked);
             // 
-            // But_Complate
+            // TB_AddedTasks
             // 
-            this.But_Complate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.But_Complate.Location = new System.Drawing.Point(61, 364);
-            this.But_Complate.Name = "But_Complate";
-            this.But_Complate.Size = new System.Drawing.Size(101, 33);
-            this.But_Complate.TabIndex = 5;
-            this.But_Complate.Tag = "Complated";
-            this.But_Complate.Text = "Complate";
-            this.But_Complate.UseVisualStyleBackColor = true;
-            this.But_Complate.Click += new System.EventHandler(this.Clicked);
+            this.TB_AddedTasks.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.TB_AddedTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
+            this.TB_AddedTasks.Location = new System.Drawing.Point(102, 66);
+            this.TB_AddedTasks.Name = "TB_AddedTasks";
+            this.TB_AddedTasks.Size = new System.Drawing.Size(140, 30);
+            this.TB_AddedTasks.TabIndex = 1;
+            this.TB_AddedTasks.TextChanged += new System.EventHandler(this.TB_AddedTasks_TextChanged);
             // 
-            // But_Delete
+            // LabelPage_1
             // 
-            this.But_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.But_Delete.Location = new System.Drawing.Point(177, 364);
-            this.But_Delete.Name = "But_Delete";
-            this.But_Delete.Size = new System.Drawing.Size(99, 30);
-            this.But_Delete.TabIndex = 6;
-            this.But_Delete.Tag = "Delete";
-            this.But_Delete.Text = "Delete";
-            this.But_Delete.UseVisualStyleBackColor = true;
-            this.But_Delete.Click += new System.EventHandler(this.Clicked);
-            // 
-            // CLB_AddTasktoList
-            // 
-            this.CLB_AddTasktoList.FormattingEnabled = true;
-            this.CLB_AddTasktoList.Items.AddRange(new object[] {
-            "\t"});
-            this.CLB_AddTasktoList.Location = new System.Drawing.Point(82, 150);
-            this.CLB_AddTasktoList.Name = "CLB_AddTasktoList";
-            this.CLB_AddTasktoList.Size = new System.Drawing.Size(174, 157);
-            this.CLB_AddTasktoList.TabIndex = 7;
+            this.LabelPage_1.AutoSize = true;
+            this.LabelPage_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.LabelPage_1.Location = new System.Drawing.Point(104, 18);
+            this.LabelPage_1.Name = "LabelPage_1";
+            this.LabelPage_1.Size = new System.Drawing.Size(138, 31);
+            this.LabelPage_1.TabIndex = 0;
+            this.LabelPage_1.Text = "To Do List";
             // 
             // Pages
             // 

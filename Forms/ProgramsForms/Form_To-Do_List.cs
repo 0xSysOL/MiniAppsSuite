@@ -43,7 +43,14 @@ namespace Project_1_SimpleCalculetor.Forms.ProgramsForms
 
         private void Clicked(object sender, EventArgs e)
         {
-           // Logic_TDL
+            Button Btn = (Button)sender;
+            Logic_TDL.Start_Proce(Btn,TB_AddedTasks);
+
+        }
+
+        private void TB_AddedTasks_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
