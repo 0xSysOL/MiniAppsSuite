@@ -66,7 +66,7 @@
             this.butSubmet.Location = new System.Drawing.Point(283, 332);
             this.butSubmet.Name = "butSubmet";
             this.butSubmet.Size = new System.Drawing.Size(189, 47);
-            this.butSubmet.TabIndex = 7;
+            this.butSubmet.TabIndex = 6;
             this.butSubmet.Tag = "false";
             this.butSubmet.Text = "Submit";
             this.butSubmet.UseVisualStyleBackColor = true;
@@ -96,7 +96,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(130, 20);
             this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Tag = "";
             this.radioButton2.Text = "User Input Table ";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -111,7 +110,6 @@
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(99, 22);
             this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Tag = "";
             this.radioButton3.Text = "To-Do List";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -124,11 +122,10 @@
             this.radioButton4.ForeColor = System.Drawing.Color.White;
             this.radioButton4.Location = new System.Drawing.Point(388, 289);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(111, 22);
+            this.radioButton4.Size = new System.Drawing.Size(73, 22);
             this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Tag = "";
-            this.radioButton4.Text = "No Program";
+            this.radioButton4.Text = "Books";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.Click += new System.EventHandler(this.radioChange);
             // 
@@ -141,7 +138,6 @@
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(111, 22);
             this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
             this.radioButton5.Tag = "";
             this.radioButton5.Text = "No Program";
             this.radioButton5.UseVisualStyleBackColor = true;
@@ -156,7 +152,6 @@
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(111, 22);
             this.radioButton6.TabIndex = 5;
-            this.radioButton6.TabStop = true;
             this.radioButton6.Tag = "";
             this.radioButton6.Text = "No Program";
             this.radioButton6.UseVisualStyleBackColor = true;
@@ -193,10 +188,12 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox3.Location = new System.Drawing.Point(378, 136);
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Project_1_SimpleCalculetor.Properties.Resources.Uma_pilha_de_livros____Vetor_Premium;
+            this.pictureBox3.Location = new System.Drawing.Point(374, 170);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(113, 147);
+            this.pictureBox3.Size = new System.Drawing.Size(113, 113);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 

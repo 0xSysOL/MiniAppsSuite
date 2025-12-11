@@ -10,8 +10,7 @@ A simple calculator in C#.
 
 ## situation/project status
 ~~the project under development~~
-
-Done
+- Done
 
 
 
@@ -33,10 +32,23 @@ Done
 
 ## situation/Status
 ~~the project under development~~
+- Done
 
 
 
+# Mini progect 3
 
+## To-Do-List
+
+## Feature
+
+- Add task
+- delet task
+- Complate task
+
+## situation/Status
+~~the project under development~~
+- Done
 
 
 

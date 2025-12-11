@@ -89,5 +89,15 @@ namespace Project_1_SimpleCalculetor.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Uma_pilha_de_livros____Vetor_Premium {
+            get {
+                object obj = ResourceManager.GetObject("Uma pilha de livros_ _ Vetor Premium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

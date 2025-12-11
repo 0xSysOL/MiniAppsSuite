@@ -130,5 +130,8 @@
   <ItemGroup>
     <None Include="Picturs\List free icons designed by Freepik.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Picturs\Uma pilha de livros_ _ Vetor Premium.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

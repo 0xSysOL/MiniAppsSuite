@@ -121,10 +121,13 @@
   <data name="table" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Picturs\table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="List free icons designed by Freepik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Picturs\List free icons designed by Freepik.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icono Calculadora Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icono Calculadora Blue.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="List free icons designed by Freepik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Picturs\List free icons designed by Freepik.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Uma pilha de livros_ _ Vetor Premium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Picturs\Uma pilha de livros_ _ Vetor Premium.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

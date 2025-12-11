@@ -56,13 +56,12 @@
             this.Page_AddTasks.Size = new System.Drawing.Size(338, 425);
             this.Page_AddTasks.TabIndex = 0;
             this.Page_AddTasks.Text = "Add Task";
-            this.Page_AddTasks.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // CLB_AddTasktoList
             // 
             this.CLB_AddTasktoList.FormattingEnabled = true;
             this.CLB_AddTasktoList.Items.AddRange(new object[] {
-            "\t"});
+            " "});
             this.CLB_AddTasktoList.Location = new System.Drawing.Point(82, 150);
             this.CLB_AddTasktoList.Name = "CLB_AddTasktoList";
             this.CLB_AddTasktoList.Size = new System.Drawing.Size(174, 157);
@@ -109,11 +108,10 @@
             // 
             this.TB_AddedTasks.BackColor = System.Drawing.Color.AntiqueWhite;
             this.TB_AddedTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
-            this.TB_AddedTasks.Location = new System.Drawing.Point(102, 66);
+            this.TB_AddedTasks.Location = new System.Drawing.Point(48, 66);
             this.TB_AddedTasks.Name = "TB_AddedTasks";
-            this.TB_AddedTasks.Size = new System.Drawing.Size(140, 30);
+            this.TB_AddedTasks.Size = new System.Drawing.Size(244, 30);
             this.TB_AddedTasks.TabIndex = 1;
-            this.TB_AddedTasks.TextChanged += new System.EventHandler(this.TB_AddedTasks_TextChanged);
             // 
             // LabelPage_1
             // 
@@ -144,7 +142,6 @@
             this.Controls.Add(this.Pages);
             this.Name = "Form_To_Do_List";
             this.Text = "To Do List";
-            this.Load += new System.EventHandler(this.Form_To_Do_List_Load);
             this.Page_AddTasks.ResumeLayout(false);
             this.Page_AddTasks.PerformLayout();
             this.Pages.ResumeLayout(false);
