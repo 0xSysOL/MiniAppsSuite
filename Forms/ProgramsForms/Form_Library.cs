@@ -14,11 +14,13 @@ namespace Project_1_SimpleCalculetor.Forms.ProgramsForms
 {
     public partial class Form_Library : Form
     {
-        public Form_Library()
+        private Form CurrentForm;
+        public Form_Library(Form getProgramSele_Form)
         {
             InitializeComponent();
+             CurrentForm = getProgramSele_Form;
 
-    
+
 
         }
         Logic_Library NewFormLib = new Logic_Library();

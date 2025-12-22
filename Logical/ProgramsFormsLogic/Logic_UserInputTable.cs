@@ -23,8 +23,8 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
         public bool IsTextBoxesEmpty(string Text_1,string Text_2) 
         {
 
-            return (Text_1 == "" && Text_2 == "") ? true : false;
-
+            return (Text_1 == "" || Text_2 == "") ? true : false;
+             
             
         }
 
@@ -86,7 +86,12 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
 
 
         }
+        public bool IsTextEmpty(string Text)
+        {
 
+            return Text == "";
+
+        }
 
 
     }

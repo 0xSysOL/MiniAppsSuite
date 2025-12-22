@@ -41,6 +41,8 @@
             this.lab_FirstName = new System.Windows.Forms.Label();
             this.lab_LastName = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.ButExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,12 +158,29 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.Visible = true;
+            // 
+            // ButExit
+            // 
+            this.ButExit.Location = new System.Drawing.Point(12, 12);
+            this.ButExit.Name = "ButExit";
+            this.ButExit.Size = new System.Drawing.Size(75, 23);
+            this.ButExit.TabIndex = 8;
+            this.ButExit.Text = "Exit";
+            this.ButExit.UseVisualStyleBackColor = true;
+            this.ButExit.Click += new System.EventHandler(this.But_Exit);
+            // 
             // Form_UserInputTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(715, 383);
+            this.Controls.Add(this.ButExit);
             this.Controls.Add(this.lab_LastName);
             this.Controls.Add(this.lab_FirstName);
             this.Controls.Add(this.TB_LastName);
@@ -171,7 +190,7 @@
             this.Controls.Add(this.Butt_);
             this.Controls.Add(this.listView);
             this.Name = "Form_UserInputTable";
-            this.Text = "Form_UserInputTable";
+            this.Text = "User Input Table";
             this.Load += new System.EventHandler(this.Form_UserInputTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
@@ -193,5 +212,7 @@
         private System.Windows.Forms.Label lab_FirstName;
         private System.Windows.Forms.Label lab_LastName;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.Button ButExit;
     }
 }

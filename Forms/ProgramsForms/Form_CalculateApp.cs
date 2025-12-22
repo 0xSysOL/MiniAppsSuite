@@ -13,7 +13,8 @@ namespace Project_1_SimpleCalculetor.Forms.ProgramsForms
 {
     public partial class Form_CalculateApp : Form
     {
-        public Form_CalculateApp()
+        private Form CurrentForm;
+        public Form_CalculateApp(Form getProgramSele_Form)
         {
             InitializeComponent();
             button0.Tag = (Byte)0;
@@ -30,7 +31,7 @@ namespace Project_1_SimpleCalculetor.Forms.ProgramsForms
             button_Div.Tag = (char)'/';
             button_Sub.Tag = (char)'-';
             button_Add.Tag = (char)'+';
-
+            CurrentForm = getProgramSele_Form;
         }
 
         Logic_CalculateApp clsStart = new Logic_CalculateApp();
@@ -80,8 +81,16 @@ namespace Project_1_SimpleCalculetor.Forms.ProgramsForms
             else 
             {
                             TB_ShowOperations.Text = "Error";
-            }
+                Common_Functions.Notification(notifyIcon_Calculate, "Error", "Syntax Error", 1000);
+          
 
+            }
+            
         }
-    }
+
+        private void But_Exit(object sender, EventArgs e)
+        {
+            Common_Functions.BackToProgramSelection(this,CurrentForm);
+        }
+    } 
 }

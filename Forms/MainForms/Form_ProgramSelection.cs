@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace Project_1_SimpleCalculetor
 {
+
+
+
     public partial class Form_ProgramSelection : Form
     {
         public Form_ProgramSelection()
@@ -24,19 +27,71 @@ namespace Project_1_SimpleCalculetor
 
         }
 
-     
+        private enum _programs
+        { calculate = 0, user_input_table = 1, to_do_list = 2, books = 3, b_d_e = 4, s_b_l = 5 };
+        public void Proc_WithRadioWeWantToChoose(PictureBox sender)
+        {
+
+            short index = Convert.ToInt16(sender.Tag);
+            switch ((_programs)index)
+            {
+
+                case _programs.calculate:
+
+                   
+                    _LogicProgramSelection.changeRadios(rad_Calculetor,ref get);
+                    break;
+
+                case _programs.user_input_table:
+
+                    _LogicProgramSelection.changeRadios(rad_UserInputTable,ref get);
+
+                    break;
+                case _programs.to_do_list:
+
+                    _LogicProgramSelection.changeRadios(rad_ToDoList,ref get);
+
+                    break;
+                case _programs.books:
+
+                    _LogicProgramSelection.changeRadios(rad_Books,ref get);
+
+                    break;
+                case _programs.b_d_e:
+
+                    _LogicProgramSelection.changeRadios(rad_BDE,ref get);
+
+                    break;
+
+                case _programs.s_b_l:
+
+                    _LogicProgramSelection.changeRadios(rad_SBL,ref get);
+
+                    break;
+
+            }
+        }
 
 
-
-
-      
         private void radioChange(object sender, EventArgs e)
         {
-            get = (RadioButton)sender;
+
+
+            if(sender.ToString().Contains("PictureBox")) 
+            {
+                
+                Proc_WithRadioWeWantToChoose((PictureBox)sender);
+                return;
+
+
+
+            }
+
+            get = _LogicProgramSelection.ChangeRadio(sender);
 
             if (Convert.ToBoolean(butSubmet.Tag) == true)
             {
-                _LogicProgramSelection.Proce_WitchProgramWeWantToRun(get.TabIndex,this);
+                _LogicProgramSelection.Proc_WitchProgramWeWantToRun(get.TabIndex,this);
             }
             butSubmet.Tag = false;
 
@@ -49,9 +104,12 @@ namespace Project_1_SimpleCalculetor
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void ClickedOnPicture(object sender, EventArgs e)
         {
+            radioChange(sender, e);
 
         }
+
+        
     }
 }

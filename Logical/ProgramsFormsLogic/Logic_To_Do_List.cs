@@ -10,18 +10,16 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
     internal class Logic_To_Do_List
     {
 
-        private bool AddTask(TextBox T_Box, CheckedListBox T_CLB) 
+        private void AddTask(TextBox T_Box, CheckedListBox T_CLB, NotifyIcon GetN) 
         {
 
             if (T_Box.Text != "") 
-            {
-
-                T_CLB.Items.Add(T_Box.Text, false);
-                return true;
-            }
             
-                return false;
-           
+                T_CLB.Items.Add(T_Box.Text, false);
+            else 
+             Common_Functions.Notification(GetN, "Error", "Plase Enter Task Name", 1000);
+       
+                          
 
             
 
@@ -45,12 +43,12 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
             if (CLB.SelectedIndex >= 0)
             {
                 CLB.Items.RemoveAt(CLB.SelectedIndex);
-
+                
             }
             
 
         }
-        public void Start_Proce(Button Btn,TextBox T_Box,CheckedListBox CLB) 
+        public bool Start_Proce(Button Btn,TextBox T_Box,CheckedListBox CLB,NotifyIcon GetN) 
         {
 
                 switch (Btn.Tag) 
@@ -58,9 +56,9 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
 
                 case "ADD_T":
                     
-                    AddTask(T_Box, CLB);
+                    AddTask(T_Box, CLB,GetN);
 
-                break;
+                    break;
 
                 case "Complated":
 
@@ -77,7 +75,7 @@ namespace Project_1_SimpleCalculetor.Logical.ProgramsFormsLogic
 
 
             }
-
+            return false;
 
 
         }

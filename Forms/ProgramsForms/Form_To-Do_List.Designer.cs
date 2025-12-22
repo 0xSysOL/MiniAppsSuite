@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Page_AddTasks = new System.Windows.Forms.TabPage();
+            this.Butt_Exit = new System.Windows.Forms.Button();
             this.CLB_AddTasktoList = new System.Windows.Forms.CheckedListBox();
             this.But_Delete = new System.Windows.Forms.Button();
             this.But_Complate = new System.Windows.Forms.Button();
@@ -36,6 +38,7 @@
             this.TB_AddedTasks = new System.Windows.Forms.TextBox();
             this.LabelPage_1 = new System.Windows.Forms.Label();
             this.Pages = new System.Windows.Forms.TabControl();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.Page_AddTasks.SuspendLayout();
             this.Pages.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +46,7 @@
             // Page_AddTasks
             // 
             this.Page_AddTasks.BackColor = System.Drawing.Color.White;
+            this.Page_AddTasks.Controls.Add(this.Butt_Exit);
             this.Page_AddTasks.Controls.Add(this.CLB_AddTasktoList);
             this.Page_AddTasks.Controls.Add(this.But_Delete);
             this.Page_AddTasks.Controls.Add(this.But_Complate);
@@ -56,6 +60,16 @@
             this.Page_AddTasks.Size = new System.Drawing.Size(338, 425);
             this.Page_AddTasks.TabIndex = 0;
             this.Page_AddTasks.Text = "Add Task";
+            // 
+            // Butt_Exit
+            // 
+            this.Butt_Exit.Location = new System.Drawing.Point(3, 6);
+            this.Butt_Exit.Name = "Butt_Exit";
+            this.Butt_Exit.Size = new System.Drawing.Size(75, 23);
+            this.Butt_Exit.TabIndex = 1;
+            this.Butt_Exit.Text = "Exit";
+            this.Butt_Exit.UseVisualStyleBackColor = true;
+            this.Butt_Exit.Click += new System.EventHandler(this.But_eixt);
             // 
             // CLB_AddTasktoList
             // 
@@ -134,6 +148,12 @@
             this.Pages.Size = new System.Drawing.Size(346, 454);
             this.Pages.TabIndex = 0;
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.Visible = true;
+            // 
             // Form_To_Do_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,6 +162,7 @@
             this.Controls.Add(this.Pages);
             this.Name = "Form_To_Do_List";
             this.Text = "To Do List";
+            this.Load += new System.EventHandler(this.Form_To_Do_List_Load);
             this.Page_AddTasks.ResumeLayout(false);
             this.Page_AddTasks.PerformLayout();
             this.Pages.ResumeLayout(false);
@@ -159,5 +180,7 @@
         private System.Windows.Forms.TextBox TB_AddedTasks;
         private System.Windows.Forms.Label LabelPage_1;
         private System.Windows.Forms.TabControl Pages;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.Button Butt_Exit;
     }
 }

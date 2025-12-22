@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Common_Functions.cs" />
     <Compile Include="Forms\MainForms\Form_ProgramSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Picturs\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Picturs\download.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

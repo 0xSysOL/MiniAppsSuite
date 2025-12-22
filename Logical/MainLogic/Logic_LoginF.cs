@@ -17,9 +17,9 @@ namespace Project_1_SimpleCalculetor.Logical
 
             if ((UserName == "Admin" && Password == "1234") || true) 
             {
-                Form_ProgramSelection f = new Form_ProgramSelection();
+                Form_ProgramSelection ProgramSelection = new Form_ProgramSelection();
                 GetCurrent.Hide();
-                f.Show();
+                ProgramSelection.Show();
             }
 
 
